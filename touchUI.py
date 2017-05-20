@@ -44,7 +44,6 @@ class Ui_MainWindow(object):
 "    color: rgb(250, 250, 250);\n"
 "}\n"
 "QPushButton:pressed{\n"
-"    \n"
 "    background-color: rgb(13, 71, 161);\n"
 "}")
         self.zaisituButton.setCheckable(False)
@@ -62,8 +61,14 @@ class Ui_MainWindow(object):
         font.setFamily("Roboto")
         font.setPointSize(45)
         self.gakunai_Button.setFont(font)
-        self.gakunai_Button.setStyleSheet("background-color: rgb(76, 175, 80);\n"
-"color: rgb(250, 250, 250);")
+        self.gakunai_Button.setStyleSheet("QPushButton{\n"
+"    background-color: rgb(76, 175, 80);\n"
+"    color: rgb(250, 250, 250);\n"
+"}\n"
+"QPushButton:pressed{\n"
+"    \n"
+"    background-color: rgb(0, 77, 64);\n"
+"}")
         self.gakunai_Button.setObjectName("gakunai_Button")
         self.horizontalLayout_3.addWidget(self.gakunai_Button)
         self.kitaku_Button = QtWidgets.QPushButton(self.centralwidget)
@@ -76,9 +81,14 @@ class Ui_MainWindow(object):
         font.setFamily("Roboto")
         font.setPointSize(45)
         self.kitaku_Button.setFont(font)
-        self.kitaku_Button.setStyleSheet("background-color: rgb(126, 87, 194);\n"
-"alternate-background-color: rgb(255, 255, 255);\n"
-"color: rgb(250, 250, 250);\n"
+        self.kitaku_Button.setStyleSheet("QPushButton{\n"
+"    background-color: rgb(126, 87, 194);\n"
+"    color: rgb(250, 250, 250);\n"
+"}\n"
+"QPushButton:pressed{\n"
+"    \n"
+"    background-color: rgb(49, 27, 146);\n"
+"}\n"
 "\n"
 "")
         self.kitaku_Button.setAutoDefault(False)
@@ -99,8 +109,14 @@ class Ui_MainWindow(object):
         font.setFamily("Roboto")
         font.setPointSize(24)
         self.soonBack_Button.setFont(font)
-        self.soonBack_Button.setStyleSheet("background-color: rgb(255, 87, 34);\n"
-"color: rgb(250, 250, 250);")
+        self.soonBack_Button.setStyleSheet("QPushButton{\n"
+"background-color: rgb(255, 87, 34);\n"
+"color: rgb(250, 250, 250);\n"
+"}\n"
+"QPushButton:pressed{\n"
+"    \n"
+"    background-color: rgb(191, 54, 12);\n"
+"}")
         self.soonBack_Button.setObjectName("soonBack_Button")
         self.verticalLayout.addWidget(self.soonBack_Button)
         self.horizontalLayout_4.addLayout(self.verticalLayout)
@@ -115,6 +131,9 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
         self.zaisituButton.clicked['bool'].connect(self.zaisituButton.repaint)
+        self.gakunai_Button.clicked['bool'].connect(self.gakunai_Button.repaint)
+        self.kitaku_Button.clicked['bool'].connect(self.kitaku_Button.repaint)
+        self.soonBack_Button.clicked['bool'].connect(self.soonBack_Button.repaint)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
