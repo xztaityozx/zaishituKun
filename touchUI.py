@@ -11,7 +11,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(1442, 870)
+        MainWindow.resize(972, 690)
         MainWindow.setStyleSheet("background-color: rgb(66, 66, 66);")
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.MinimumExpanding, QtWidgets.QSizePolicy.MinimumExpanding)
@@ -122,7 +122,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_4.addLayout(self.verticalLayout)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 1442, 21))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 972, 21))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
@@ -130,10 +130,10 @@ class Ui_MainWindow(object):
         MainWindow.setStatusBar(self.statusbar)
 
         self.retranslateUi(MainWindow)
+        self.soonBack_Button.clicked['bool'].connect(self.soonBack_Button.repaint)
         self.zaisituButton.clicked['bool'].connect(self.zaisituButton.repaint)
         self.gakunai_Button.clicked['bool'].connect(self.gakunai_Button.repaint)
         self.kitaku_Button.clicked['bool'].connect(self.kitaku_Button.repaint)
-        self.soonBack_Button.clicked['bool'].connect(self.soonBack_Button.repaint)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1442</width>
-    <height>870</height>
+    <width>972</width>
+    <height>690</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -187,7 +187,7 @@ QPushButton:pressed{
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1442</width>
+     <width>972</width>
      <height>21</height>
     </rect>
    </property>
@@ -196,6 +196,22 @@ QPushButton:pressed{
  </widget>
  <resources/>
  <connections>
+  <connection>
+   <sender>soonBack_Button</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>soonBack_Button</receiver>
+   <slot>repaint()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>514</x>
+     <y>803</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>742</x>
+     <y>821</y>
+    </hint>
+   </hints>
+  </connection>
   <connection>
    <sender>zaisituButton</sender>
    <signal>clicked(bool)</signal>
@@ -241,22 +257,6 @@ QPushButton:pressed{
     <hint type="destinationlabel">
      <x>1100</x>
      <y>112</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>soonBack_Button</sender>
-   <signal>clicked(bool)</signal>
-   <receiver>soonBack_Button</receiver>
-   <slot>repaint()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>514</x>
-     <y>803</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>742</x>
-     <y>821</y>
     </hint>
    </hints>
   </connection>

@@ -3,5 +3,16 @@
     "runner.languageMap": {
         "python":"runner.bat"
     },
-    "python.linter": "Flake8"
+    "python.linting.flake8Enabled": true,
+    "python.linting.pylintEnabled": false,
+    "background.enabled": true,
+    "background.useDefault": false,
+    "background.customImages": [
+        "file:///C:/Users/sldl77/Pictures/65313893_700h.png"
+    ],
+    "workbench.colorCustomizations": {
+        "activityBar.background": "#333333",
+        "activityBar.foreground": "#3399ff"
+    }
+
 }
