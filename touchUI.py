@@ -143,10 +143,12 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
         self.soonBack_Button.clicked['bool'].connect(
             lambda: self.output_code(self.soonBack_Button, 1))
-        self.zaisituButton.clicked['bool'].connect(self.zaisituButton.repaint)
+        self.zaisituButton.clicked['bool'].connect(
+            lambda: self.output_code(self.zaisituButton, 2))
         self.gakunai_Button.clicked['bool'].connect(
-            self.gakunai_Button.repaint)
-        self.kitaku_Button.clicked['bool'].connect(self.kitaku_Button.repaint)
+            lambda: self.output_code(self.gakunai_Button, 3))
+        self.kitaku_Button.clicked['bool'].connect(
+            lambda: self.output_code(self.kitaku_Button, 4))
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
@@ -158,5 +160,5 @@ class Ui_MainWindow(object):
         self.soonBack_Button.setText(_translate("MainWindow", "すぐ戻る"))
 
     def output_code(self, Button, code):
-            Button.repaint
-            print(code)
+        Button.repaint
+        print(code)
