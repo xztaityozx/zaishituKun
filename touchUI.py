@@ -8,16 +8,19 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 
+
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(972, 690)
         MainWindow.setStyleSheet("background-color: rgb(66, 66, 66);")
         self.centralwidget = QtWidgets.QWidget(MainWindow)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.MinimumExpanding, QtWidgets.QSizePolicy.MinimumExpanding)
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.MinimumExpanding, QtWidgets.QSizePolicy.MinimumExpanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.centralwidget.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.centralwidget.sizePolicy().hasHeightForWidth())
         self.centralwidget.setSizePolicy(sizePolicy)
         self.centralwidget.setObjectName("centralwidget")
         self.horizontalLayout_4 = QtWidgets.QHBoxLayout(self.centralwidget)
@@ -29,10 +32,12 @@ class Ui_MainWindow(object):
         self.horizontalLayout_3 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_3.setObjectName("horizontalLayout_3")
         self.zaisituButton = QtWidgets.QPushButton(self.centralwidget)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.MinimumExpanding, QtWidgets.QSizePolicy.MinimumExpanding)
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.MinimumExpanding, QtWidgets.QSizePolicy.MinimumExpanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.zaisituButton.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.zaisituButton.sizePolicy().hasHeightForWidth())
         self.zaisituButton.setSizePolicy(sizePolicy)
         font = QtGui.QFont()
         font.setFamily("Roboto")
@@ -40,57 +45,61 @@ class Ui_MainWindow(object):
         self.zaisituButton.setFont(font)
         self.zaisituButton.setCursor(QtGui.QCursor(QtCore.Qt.ArrowCursor))
         self.zaisituButton.setStyleSheet("QPushButton{\n"
-"    background-color: rgb(33, 150, 243);\n"
-"    color: rgb(250, 250, 250);\n"
-"}\n"
-"QPushButton:pressed{\n"
-"    background-color: rgb(13, 71, 161);\n"
-"}")
+                                         "    background-color: rgb(33, 150, 243);\n"
+                                         "    color: rgb(250, 250, 250);\n"
+                                         "}\n"
+                                         "QPushButton:pressed{\n"
+                                         "    background-color: rgb(13, 71, 161);\n"
+                                         "}")
         self.zaisituButton.setCheckable(False)
         self.zaisituButton.setChecked(False)
         self.zaisituButton.setAutoRepeatDelay(296)
         self.zaisituButton.setObjectName("zaisituButton")
         self.horizontalLayout_3.addWidget(self.zaisituButton)
         self.gakunai_Button = QtWidgets.QPushButton(self.centralwidget)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.MinimumExpanding, QtWidgets.QSizePolicy.MinimumExpanding)
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.MinimumExpanding, QtWidgets.QSizePolicy.MinimumExpanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.gakunai_Button.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.gakunai_Button.sizePolicy().hasHeightForWidth())
         self.gakunai_Button.setSizePolicy(sizePolicy)
         font = QtGui.QFont()
         font.setFamily("Roboto")
         font.setPointSize(45)
         self.gakunai_Button.setFont(font)
         self.gakunai_Button.setStyleSheet("QPushButton{\n"
-"    background-color: rgb(76, 175, 80);\n"
-"    color: rgb(250, 250, 250);\n"
-"}\n"
-"QPushButton:pressed{\n"
-"    \n"
-"    background-color: rgb(0, 77, 64);\n"
-"}")
+                                          "    background-color: rgb(76, 175, 80);\n"
+                                          "    color: rgb(250, 250, 250);\n"
+                                          "}\n"
+                                          "QPushButton:pressed{\n"
+                                          "    \n"
+                                          "    background-color: rgb(0, 77, 64);\n"
+                                          "}")
         self.gakunai_Button.setObjectName("gakunai_Button")
         self.horizontalLayout_3.addWidget(self.gakunai_Button)
         self.kitaku_Button = QtWidgets.QPushButton(self.centralwidget)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.MinimumExpanding, QtWidgets.QSizePolicy.MinimumExpanding)
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.MinimumExpanding, QtWidgets.QSizePolicy.MinimumExpanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.kitaku_Button.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.kitaku_Button.sizePolicy().hasHeightForWidth())
         self.kitaku_Button.setSizePolicy(sizePolicy)
         font = QtGui.QFont()
         font.setFamily("Roboto")
         font.setPointSize(45)
         self.kitaku_Button.setFont(font)
         self.kitaku_Button.setStyleSheet("QPushButton{\n"
-"    background-color: rgb(126, 87, 194);\n"
-"    color: rgb(250, 250, 250);\n"
-"}\n"
-"QPushButton:pressed{\n"
-"    \n"
-"    background-color: rgb(49, 27, 146);\n"
-"}\n"
-"\n"
-"")
+                                         "    background-color: rgb(126, 87, 194);\n"
+                                         "    color: rgb(250, 250, 250);\n"
+                                         "}\n"
+                                         "QPushButton:pressed{\n"
+                                         "    \n"
+                                         "    background-color: rgb(49, 27, 146);\n"
+                                         "}\n"
+                                         "\n"
+                                         "")
         self.kitaku_Button.setAutoDefault(False)
         self.kitaku_Button.setDefault(False)
         self.kitaku_Button.setFlat(False)
@@ -99,10 +108,12 @@ class Ui_MainWindow(object):
         self.horizontalLayout_2.addLayout(self.horizontalLayout_3)
         self.verticalLayout.addLayout(self.horizontalLayout_2)
         self.soonBack_Button = QtWidgets.QPushButton(self.centralwidget)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.MinimumExpanding, QtWidgets.QSizePolicy.MinimumExpanding)
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.MinimumExpanding, QtWidgets.QSizePolicy.MinimumExpanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.soonBack_Button.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.soonBack_Button.sizePolicy().hasHeightForWidth())
         self.soonBack_Button.setSizePolicy(sizePolicy)
         self.soonBack_Button.setMaximumSize(QtCore.QSize(16777215, 80))
         font = QtGui.QFont()
@@ -110,13 +121,13 @@ class Ui_MainWindow(object):
         font.setPointSize(24)
         self.soonBack_Button.setFont(font)
         self.soonBack_Button.setStyleSheet("QPushButton{\n"
-"background-color: rgb(255, 87, 34);\n"
-"color: rgb(250, 250, 250);\n"
-"}\n"
-"QPushButton:pressed{\n"
-"    \n"
-"    background-color: rgb(191, 54, 12);\n"
-"}")
+                                           "background-color: rgb(255, 87, 34);\n"
+                                           "color: rgb(250, 250, 250);\n"
+                                           "}\n"
+                                           "QPushButton:pressed{\n"
+                                           "    \n"
+                                           "    background-color: rgb(191, 54, 12);\n"
+                                           "}")
         self.soonBack_Button.setObjectName("soonBack_Button")
         self.verticalLayout.addWidget(self.soonBack_Button)
         self.horizontalLayout_4.addLayout(self.verticalLayout)
@@ -130,9 +141,11 @@ class Ui_MainWindow(object):
         MainWindow.setStatusBar(self.statusbar)
 
         self.retranslateUi(MainWindow)
-        self.soonBack_Button.clicked['bool'].connect(self.soonBack_Button.repaint)
+        self.soonBack_Button.clicked['bool'].connect(
+            lambda: self.output_code(self.soonBack_Button, 1))
         self.zaisituButton.clicked['bool'].connect(self.zaisituButton.repaint)
-        self.gakunai_Button.clicked['bool'].connect(self.gakunai_Button.repaint)
+        self.gakunai_Button.clicked['bool'].connect(
+            self.gakunai_Button.repaint)
         self.kitaku_Button.clicked['bool'].connect(self.kitaku_Button.repaint)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
@@ -144,3 +157,6 @@ class Ui_MainWindow(object):
         self.kitaku_Button.setText(_translate("MainWindow", "帰宅"))
         self.soonBack_Button.setText(_translate("MainWindow", "すぐ戻る"))
 
+    def output_code(self, Button, code):
+            Button.repaint
+            print(code)
