@@ -142,13 +142,13 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
         self.soonBack_Button.clicked['bool'].connect(
-            lambda: self.output_code(self.soonBack_Button, 1))
+            lambda: self.output_code(self.soonBack_Button, "すぐ戻る"))
         self.zaisituButton.clicked['bool'].connect(
-            lambda: self.output_code(self.zaisituButton, 2))
+            lambda: self.output_code(self.zaisituButton, "在室"))
         self.gakunai_Button.clicked['bool'].connect(
-            lambda: self.output_code(self.gakunai_Button, 3))
+            lambda: self.output_code(self.gakunai_Button, "学内"))
         self.kitaku_Button.clicked['bool'].connect(
-            lambda: self.output_code(self.kitaku_Button, 4))
+            lambda: self.output_code(self.kitaku_Button, "帰宅"))
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):

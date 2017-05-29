@@ -1,0 +1,4 @@
+23456789abcdef01 abc 在室
+3456789abcdef012 efg 帰宅
+0123456789abcdef hij 在室
+123456789abcdef0 klm 在室
