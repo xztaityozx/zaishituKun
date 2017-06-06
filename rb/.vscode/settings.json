@@ -1,0 +1,13 @@
+// 既定の設定とユーザー設定を上書きするには、このファイル内に設定を挿入します
+{
+    "ruby.rubocop.onSave": true,
+    "ruby.rubocop.executePath": "/home/ubuntu/.rbenv/shims/",
+    "ruby.lint": {
+        "ruby": false,
+        "rubocop": true,
+        "ruby-lint": true,
+        "debride": true,
+        "fasterer": true,
+        "reek": true
+    }
+}

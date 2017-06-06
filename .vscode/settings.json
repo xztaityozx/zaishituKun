@@ -13,6 +13,16 @@
     "workbench.colorCustomizations": {
         "activityBar.background": "#333333",
         "activityBar.foreground": "#3399ff"
+    },
+    "ruby.rubocop.executePath": "/home/ubuntu/.rbenv/shims/",
+    "ruby.rubocop.onSave": false,
+    "ruby.lint": {
+        "reek": true,
+        "ruby-lint": true,
+        "ruby": false,
+        "fasterer": true,
+        "debride": true,
+        "rubocop": true
     }
 
 }
