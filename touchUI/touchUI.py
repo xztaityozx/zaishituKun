@@ -7,6 +7,7 @@
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+import subprocess
 
 
 class Ui_MainWindow(object):
@@ -142,13 +143,13 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
         self.soonBack_Button.clicked['bool'].connect(
-            lambda: self.output_code(self.soonBack_Button, "すぐ戻る"))
+            lambda: self.output_code(self.soonBack_Button, "3"))
         self.zaisituButton.clicked['bool'].connect(
-            lambda: self.output_code(self.zaisituButton, "在室"))
+            lambda: self.output_code(self.zaisituButton, "0"))
         self.gakunai_Button.clicked['bool'].connect(
-            lambda: self.output_code(self.gakunai_Button, "学内"))
+            lambda: self.output_code(self.gakunai_Button, "1"))
         self.kitaku_Button.clicked['bool'].connect(
-            lambda: self.output_code(self.kitaku_Button, "帰宅"))
+            lambda: self.output_code(self.kitaku_Button, "2"))
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
@@ -161,4 +162,5 @@ class Ui_MainWindow(object):
 
     def output_code(self, Button, code):
         Button.repaint
+        print(subprocess.check_output("./cardReader.sh"))
         print(code)
