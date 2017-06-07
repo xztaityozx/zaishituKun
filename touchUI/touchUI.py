@@ -8,6 +8,7 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 import subprocess
+import dbReaderWriter
 
 
 class Ui_MainWindow(object):
@@ -162,5 +163,7 @@ class Ui_MainWindow(object):
 
     def output_code(self, Button, code):
         Button.repaint
-        print(subprocess.check_output("./cardReader.sh"))
-        print(code)
+        rw = dbReaderWriter.ReaderWriter()
+        card_id = subprocess.check_output("./cardReader.sh")
+        rw.ChangeCondition(card_id, code)
+        rw.Close()
