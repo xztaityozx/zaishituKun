@@ -1,17 +1,19 @@
 import sqlite3
+import os
 
-
-dbname = '../db/database.sqlite3'
+dbname = os.environ["ZAISEKIKUN_PATH"]+'db/database.sqlite3'
 
 
 class ReaderWriter(object):
-    db = sqlite3.connect(dbname)
-    cursor = db.cursor()
-    __select_query = 'select conditions from members where id=?'
+    __select_query = 'select conditions from members where id LIKE ?'
 
     def Execute(self, query, params):
         self.cursor.execute(query, params)
         self.db.commit()
+
+    def ConnectToDB(self):
+        self.db = sqlite3.connect(dbname)
+        self.cursor = self.db.cursor()
 
     def Delete(self, id):
         id_datas = (id,)
@@ -24,7 +26,7 @@ class ReaderWriter(object):
     def ToggleCondition(self, id):
         sel_data = (id,)
         self.cursor.execute(self.__select_query, sel_data)
-        upd_query1 = 'update members set conditions=? where id=?'
+        upd_query1 = 'update members set conditions=? where id LIKE ?'
         result = self.cursor.fetchone()
         self.UpdateTime(id, 0 if result[0] == 1 else 0)
         if result[0] == 0:
@@ -42,7 +44,7 @@ class ReaderWriter(object):
         return result[0]
 
     def ChangeCondition(self, id, condition):
-        query = 'update members set conditions=? where id=?'
+        query = 'update members set conditions=? where id LIKE ?'
         set_data = (condition, id)
         current_Condition = self.GetConditions(id)
         if condition == 0 and current_Condition != 0:
@@ -58,17 +60,26 @@ class ReaderWriter(object):
         id_data = (id,)
         if to_in_or_out == 0:
             upd_query2 = '''update timecard set login_time=strftime("%Y%m%d%H%M%S",
-                            datetime(datetime(),"localtime")) where id=?'''
+                            datetime(datetime(),"localtime")) where id LIKE ?'''
         else:
             upd_query2 = '''update timecard set logout_time=strftime("%Y%m%d%H%M%S",
-                            datetime(datetime(),"localtime")) where id=?'''
+                            datetime(datetime(),"localtime")) where id LIKE ?'''
         self.cursor.execute(upd_query2, id_data)
 
     def GetName(self, id):
-        query = 'select name from members where id=?'
+        query = 'select name from members where id LIKE ?'
         id_data = (id,)
         res = self.cursor.execute(query, id_data)
         return res[0]
+
+    def GetZaishituUsers(self):
+        query = 'select name from members where conditions=0'
+        res = self.cursor.execute(query)
+        return res
+
+    def GetGakunaiUsers(self):
+        query = 'select name from members where conditions=1'
+        return self.cursor.execute(query)
 
     def Show(self):
         query = 'select * from members'
@@ -77,13 +88,3 @@ class ReaderWriter(object):
 
     def Close(self):
         self.db.close()
-
-
-def main():
-    rw = ReaderWriter()
-    rw.Delete("01149e134514f602")
-    rw.db.close()
-
-
-if __name__ == '__main__':
-    main()
