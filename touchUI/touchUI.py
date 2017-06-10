@@ -8,6 +8,7 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 import os
+import connectToKonata
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -161,6 +162,4 @@ class Ui_MainWindow(object):
 
     def output_code(self, Button, code):
         Button.repaint
-        with open(os.environ["ZAISEKIKUN_PATH"]+"touchUI/dataBank.txt", mode='w') as target:
-            target.writelines("1\n")
-            target.writelines(code+"")
+        connectToKonata.ConnectToKonata(code)
