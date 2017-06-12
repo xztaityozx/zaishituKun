@@ -1,8 +1,7 @@
 import sqlite3
 import os
 
-dbname = os.environ["ZAISEKIKUN_PATH"]+'db/database.sqlite3'
-
+dbname = os.environ["ZAISEKIKUN_PATH"] + 'db/database.sqlite3'
 
 class ReaderWriter(object):
     __select_query = 'select conditions from members where id LIKE ?'
@@ -86,5 +85,15 @@ class ReaderWriter(object):
         for row in self.cursor.execute(query):
             print(row)
 
+    def Regist(self, code, name):
+        query = 'insert into members values(?,?,0)'
+        q_data = (code, name)
+        self.cursor.execute(query, q_data)
+        query = 'insert into timecard values(?,strftime("%Y%m%d%H%M%S",datetime(datetime(),"localtime")),"00000000000000")'
+        q_data = (code,)
+        self.cursor.execute(query, q_data)
+        self.db.commit()
+
     def Close(self):
         self.db.close()
+
