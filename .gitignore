@@ -99,3 +99,8 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+#RoR
+/RoR/log/
+/RoR/tmp/cache/
+/RoR/vendor/
